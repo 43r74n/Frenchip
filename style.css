@@ -1,0 +1,152 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+html {
+  font-size: calc(100vw / 30);
+}
+
+main {
+  border-bottom: 2px solid var(--gron6);
+  margin: 0 auto;
+  width: 100vw;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+section > article {
+  display: flex;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+section > article > * {
+  border: 2px solid var(--gron5);
+  border-right: 0;
+  border-bottom: 0;
+}
+
+section > article::before {
+  content: '';
+  display: block;
+  margin-right: 2rem;
+  order: 2;
+  width: 1rem;
+  background: var(--gron3);
+  border: 2px solid var(--gron5);
+  border-bottom: none;
+}
+
+section > article::after {
+  content: '';
+  display: block;
+  margin-right: 2rem;
+  order: 5;
+  width: 1rem;
+  background: var(--gron1);
+  border: 2px solid var(--gron5);
+  border-bottom: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14pt;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  border-color: var(--gron5);
+  border-width: 2px 0 0 2px;
+  order: 1;
+  padding: 0 1rem;
+  width: 5rem;
+  font-size: 32pt;
+  text-align: center;
+}
+
+h2 {
+  order: 4;
+  padding-left: 0.5rem;
+  width: 14rem;
+  background: var(--gron2);
+  color: var(--gron2);
+  font-size: 24pt;
+}
+
+h3 {
+  order: 3;
+  width: 1rem;
+  background: var(--gron2);
+}
+
+h4 {
+  flex-shrink: 0;
+  order: 5;
+  padding: 0;
+  width: 2rem;
+  background: var(--gron2);
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+h4:active + h2 {
+  background: var(--gron1) !important;
+  color: black;
+}
+
+section > article:nth-child(1):hover + article:nth-child(4) {
+  background: var(--gron1) !important;
+  color: black;
+}
+
+article:nth-child(1)::after {
+  background: blue;
+  height: 6rem;
+  z-index: 2;
+}
+
+h6 {
+  border-right: 2px solid var(--gron5);
+  width: 1rem;
+}
+
+article:nth-child(6n + 1) > :is(h1, h3),
+article:nth-child(6n + 2) > :is(h1, h3),
+article:nth-child(6n + 3) > :is(h1, h3) {
+  background: var(--gron2);
+}
+article:nth-child(6n + 4) > :is(h1, h3),
+article:nth-child(6n + 5) > :is(h1, h3),
+article:nth-child(6n + 6) > :is(h1, h3) {
+  background: var(--cyan2);
+}
+article:nth-child(6n + 1) > :is(h2),
+article:nth-child(6n + 2) > :is(h2),
+article:nth-child(6n + 3) > :is(h2) {
+  background: var(--gron2);
+}
+article:nth-child(6n + 4) > :is(h2),
+article:nth-child(6n + 5) > :is(h2),
+article:nth-child(6n + 6) > :is(h2) {
+  background: var(--cyan1);
+}
+
+h6:nth-of-type(1) {
+  background: var(--gron3);
+  order: 2;
+}
+h6:nth-of-type(2) {
+  background: var(--gron1);
+  order: 5;
+}

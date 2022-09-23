@@ -1,0 +1,22 @@
+/*** S ***/
+@media (min-width: 576px) {
+}
+
+/*** M ***/
+@media (min-width: 768px) {
+}
+
+/*** L ***/
+@media (min-width: 992px) {
+  html {
+    font-size: calc(100vw / 70);
+  }
+}
+
+/*** XL ***/
+@media (min-width: 1200px) {
+}
+
+/*** XXL ***/
+@media (min-width: 1400px) {
+}
