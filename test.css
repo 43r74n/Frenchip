@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../lib/font-family/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Regular.ttf');
+}
+
+html {
+  font-family: 'FiraSans';
+}

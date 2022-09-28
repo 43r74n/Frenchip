@@ -4,6 +4,7 @@ import './index.css';
 import './var/br-pt.css';
 import './var/col.css';
 import './var/font-family.css';
+import './test.css';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
