@@ -1,9 +1,5 @@
-h1,
-h2 {
-  font-family: Lato;
-}
-
 html {
+  font-family: 'FiraSans';
   font-size: calc(100vw / 30);
 }
 
@@ -32,72 +28,61 @@ section > article > * {
 }
 
 section > article::before {
+  background: var(--gron3);
+  border: 2px solid var(--gron5);
+  border-bottom: none;
   content: '';
   display: block;
   margin-right: 2rem;
   order: 2;
   width: 1rem;
-  background: var(--gron3);
-  border: 2px solid var(--gron5);
-  border-bottom: none;
 }
 
 section > article::after {
+  background: var(--gron1);
+  border: 2px solid var(--gron5);
+  border-bottom: none;
   content: '';
   display: block;
   margin-right: 2rem;
   order: 5;
   width: 1rem;
-  background: var(--gron1);
-  border: 2px solid var(--gron5);
-  border-bottom: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 14pt;
-  font-weight: normal;
-  margin: 0;
 }
 
 h1 {
   border-color: var(--gron5);
   border-width: 2px 0 0 2px;
+  font-size: 32pt;
   order: 1;
   padding: 0 1rem;
-  width: 5rem;
-  font-size: 32pt;
   text-align: center;
+  width: 5rem;
 }
 
 h2 {
-  order: 4;
-  padding-left: 0.5rem;
-  width: 14rem;
   background: var(--gron2);
   color: var(--gron2);
   font-size: 24pt;
+  order: 4;
+  padding-left: 0.5rem;
+  width: 14rem;
 }
 
 h3 {
+  background: var(--gron2);
   order: 3;
   width: 1rem;
-  background: var(--gron2);
 }
 
 h4 {
+  background: var(--gron2);
+  cursor: pointer;
   flex-shrink: 0;
   order: 5;
   padding: 0;
-  width: 2rem;
-  background: var(--gron2);
-  cursor: pointer;
   text-align: center;
   user-select: none;
+  width: 2rem;
 }
 
 h4:active + h2 {
