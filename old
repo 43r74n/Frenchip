@@ -10,3 +10,17 @@
 html {
   font-family: 'Fira Sans Extra Condensed';
 }
+
+.w > article > h1 {
+  background: var(--gron2);
+}
+
+.w > article > h1 {
+  display: block;
+  box-shadow: 1px 0 0 0 var(--gron6), 25px 0 0 0 var(--gron1),
+    26px 0 0 0 var(--gron6);
+  /*clip-path: inset(0px -15px 0px 0px);*/
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+}

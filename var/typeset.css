@@ -2,5 +2,8 @@
 
 html {
   font-family: 'Fira Sans Extra Condensed';
-  font-weight: 200;
+}
+
+h1 {
+  font-weight: 400;
 }

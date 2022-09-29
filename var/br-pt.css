@@ -9,7 +9,7 @@
 /*** L ***/
 @media (min-width: 992px) {
   html {
-    font-size: calc(100vw / 70);
+    font-size: calc(100vw / 50);
   }
 }
 
