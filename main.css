@@ -1,12 +1,3 @@
-@font-face {
-  font-family: 'FiraSans';
-  src: url('/lib/font-family/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Regular.ttf');
-}
-
-html {
-  font-family: 'FiraSans' !important;
-}
-
 html {
   font-size: calc(100vw / 30);
 }
@@ -69,7 +60,7 @@ h1 {
 
 h2 {
   background: var(--gron2);
-  color: var(--gron2);
+  color: var(--gron6);
   font-size: 24pt;
   order: 4;
   padding-left: 0.5rem;
