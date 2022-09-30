@@ -69,6 +69,7 @@ h6 {
 .w > article > h1 {
   background: var(--gron2);
   display: block;
+  font-size: 24pt;
   margin-right: 2rem;
   order: 1;
   position: relative;
