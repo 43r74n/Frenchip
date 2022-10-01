@@ -7,15 +7,42 @@ html {
 }
 
 main {
+  align-items: center;
   border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
   margin: 2rem auto;
-  width: 30rem;
+  margin-bottom: 1rem;
+  width: 34rem;
 }
-
-main > section:not(:last-child) {
+main > section {
   margin-bottom: 1rem;
 }
 
+section.m {
+  display: flex;
+}
+section.n {
+  flex: 1;
+  flex-shrink: 0;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+section.h {
+  flex: 1;
+  flex-shrink: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+section.w {
+  flex: 1;
+  flex-shrink: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.n nav,
+.n nav svg,
 .h h1,
 h2,
 h3,
@@ -28,28 +55,59 @@ h3,
 h4,
 h5,
 h6 {
-  display: flex;
+  display: block;
   flex-shrink: 0;
   outline: 2px solid var(--gron6);
 }
 
-.h > article {
+section.m > h1 {
+  font-size: 36pt;
+}
+
+section.n > nav {
+  background: var(--blue1);
   display: flex;
   flex-shrink: 0;
   height: 2rem;
+  line-height: 2rem;
+  position: relative;
+  width: 29rem;
+}
+section.n > nav::after {
+  background: var(--blue2);
+  content: '';
+  outline: 2px solid var(--blue6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: -1rem;
+  width: 1rem;
+}
+section.n > nav > h1 {
+  display: flex;
+  font-size: 30pt;
+  height: 100%;
+  line-height: 2rem;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.h > article > h1 {
-  background: var(--gold3);
-  display: block;
-  font-size: 24pt;
+section.h > article {
+  display: flex;
+  flex-shrink: 0;
+  height: 2rem;
   line-height: 2rem;
+}
+section.h > article > h1 {
+  background: var(--gold3);
+  font-size: 24pt;
   position: relative;
   text-align: center;
   width: 29rem;
 }
-
-.h > article > h1::after {
+section.h > article > h1::after {
   background: var(--gold2);
   content: '';
   outline: 2px solid var(--gron6);
@@ -60,15 +118,14 @@ h6 {
   width: 1rem;
 }
 
-.w > article {
+section.w > article {
   display: flex;
   flex-shrink: 0;
   height: 2rem;
   line-height: 2rem;
 }
-.w > article > h1 {
+section.w > article > h1 {
   background: var(--gron2);
-  display: block;
   font-size: 24pt;
   margin-right: 2rem;
   order: 1;
@@ -76,82 +133,79 @@ h6 {
   text-align: center;
   width: 5rem;
 }
-.w > article > h2 {
+section.w > article > h2 {
   background: var(--gron2);
-  display: block;
   order: 3;
   padding: 0 0.5rem;
   width: 19rem;
 }
-.w > article > h3 {
+section.w > article > h3 {
   background: var(--gron2);
-  display: block;
   order: 2;
   width: 1rem;
 }
-.w > article > h4 {
+section.w > article > h4 {
   background: var(--gron2);
-  display: block;
   order: 4;
   position: relative;
   width: 2rem;
 }
 
-.w > article > :is(h1, h4)::after {
+section.w > article:nth-child(6n + 1) > :is(h1, h3, h4),
+section.w > article:nth-child(6n + 2) > :is(h1, h3, h4),
+section.w > article:nth-child(6n + 3) > :is(h1, h3, h4) {
+  background: var(--gron2);
+}
+section.w > article:nth-child(6n + 4) > :is(h1, h3, h4),
+section.w > article:nth-child(6n + 5) > :is(h1, h3, h4),
+section.w > article:nth-child(6n + 6) > :is(h1, h3, h4) {
+  background: var(--cyan2);
+}
+section.w > article:nth-child(6n + 1) > h2,
+section.w > article:nth-child(6n + 2) > h2,
+section.w > article:nth-child(6n + 3) > h2 {
+  background: var(--gron1);
+}
+section.w > article:nth-child(6n + 4) > h2,
+section.w > article:nth-child(6n + 5) > h2,
+section.w > article:nth-child(6n + 6) > h2 {
+  background: var(--cyan1);
+}
+
+section.w > article:nth-child(6n + 1) > h1::after,
+section.w > article:nth-child(6n + 2) > h1::after,
+section.w > article:nth-child(6n + 3) > h1::after {
+  background: var(--gron3);
+  content: '';
+  outline: 2px solid var(--gron6);
+}
+section.w > article:nth-child(6n + 4) > h1::after,
+section.w > article:nth-child(6n + 5) > h1::after,
+section.w > article:nth-child(6n + 6) > h1::after {
+  background: var(--cyan3);
+  content: '';
+  outline: 2px solid var(--cyan6);
+}
+section.w > article:nth-child(6n + 1) > h4::after,
+section.w > article:nth-child(6n + 2) > h4::after,
+section.w > article:nth-child(6n + 3) > h4::after {
+  background: var(--gron1);
+  content: '';
+  outline: 2px solid var(--gron6);
+}
+section.w > article:nth-child(6n + 4) > h4::after,
+section.w > article:nth-child(6n + 5) > h4::after,
+section.w > article:nth-child(6n + 6) > h4::after {
+  background: var(--cyan1);
+  content: '';
+  outline: 2px solid var(--cyan6);
+}
+
+section.w > article > :is(h1, h4)::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: -1rem;
   top: 0px;
   width: 1rem;
-}
-
-.w > article:nth-child(6n + 1) > :is(h1, h3),
-.w > article:nth-child(6n + 2) > :is(h1, h3),
-.w > article:nth-child(6n + 3) > :is(h1, h3) {
-  background: var(--gron2);
-}
-.w > article:nth-child(6n + 4) > :is(h1, h3),
-.w > article:nth-child(6n + 5) > :is(h1, h3),
-.w > article:nth-child(6n + 6) > :is(h1, h3) {
-  background: var(--cyan2);
-}
-.w > article:nth-child(6n + 1) > :is(h2, h4),
-.w > article:nth-child(6n + 2) > :is(h2, h4),
-.w > article:nth-child(6n + 3) > :is(h2, h4) {
-  background: var(--gron2);
-}
-.w > article:nth-child(6n + 4) > :is(h2, h4),
-.w > article:nth-child(6n + 5) > :is(h2, h4),
-.w > article:nth-child(6n + 6) > :is(h2, h4) {
-  background: var(--cyan2);
-}
-
-.w > article:nth-child(6n + 1) > h1::after,
-.w > article:nth-child(6n + 2) > h1::after,
-.w > article:nth-child(6n + 3) > h1::after {
-  background: var(--gron3);
-  content: '';
-  outline: 2px solid var(--gron6);
-}
-.w > article:nth-child(6n + 4) > h1::after,
-.w > article:nth-child(6n + 5) > h1::after,
-.w > article:nth-child(6n + 6) > h1::after {
-  background: var(--cyan3);
-  content: '';
-  outline: 2px solid var(--cyan6);
-}
-.w > article:nth-child(6n + 1) > h4::after,
-.w > article:nth-child(6n + 2) > h4::after,
-.w > article:nth-child(6n + 3) > h4::after {
-  background: var(--gron1);
-  content: '';
-  outline: 2px solid var(--gron6);
-}
-.w > article:nth-child(6n + 4) > h4::after,
-.w > article:nth-child(6n + 5) > h4::after,
-.w > article:nth-child(6n + 6) > h4::after {
-  background: var(--cyan1);
-  content: '';
-  outline: 2px solid var(--cyan6);
 }
